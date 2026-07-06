@@ -46,6 +46,10 @@ app.use(limiter); //Aplica el limitador de peticiones a toda la aplicación
 
 app.use("/api/docs", swaggerUI.serve, swaggerUI.setup(swaggerSpec));
 
+app.get("/health", (req, res) => {
+    res.status(200).json({ status: "ok" });
+});
+
 app.use("/api", indexRoutes); //Asigna el prefijo /api a las rutas generales
 app.use("/api/auth", authRoutes); //Asigna el prefijo /api/auth a las rutas de autenticación
 app.use("/api", reviewRoutes) //Asigna el prefijo /api a las rutas de reseñas
