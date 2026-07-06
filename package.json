@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "node --watch --env-file=.env src/server.js",
     "start": "node --env-file=.env src/server.js",
-    "test": "node --experimental-vm-modules node_modules/.bin/jest",
+    "test": "jest",
     "test:watch": "node --experimental-vm-modules node_modules/.bin/jest --watch"
   },
   "jest": {
@@ -27,6 +27,7 @@
     "mongoose": "9.6.3",
     "multer": "^2.2.0",
     "pg": "8.21.0",
+    "supertest": "^7.2.2",
     "swagger-jsdoc": "^6.3.0",
     "swagger-ui-express": "^5.0.1"
   },

@@ -13,6 +13,7 @@ import authRoutes from "./routes/auth.routes.js"; //Importa las rutas relacionad
 import reviewRoutes from "./routes/review.routes.js"; //Importa las rutas relacionadas con las reseñas
 import wishlistRoutes from "./routes/wishlist.routes.js" //Importa las rutas relacionadas con la lista de deseos
 import cartRoutes from "./routes/cart.routes.js"
+import cloudinaryRoutes from "./routes/cloudinary.routes.js";
 
 import { notFound } from "./middlewares/notFound.js"; //Importa el middleware para manejar rutas no encontradas
 import { errorHandler } from "./middlewares/errorHandler.js"; //Importa el middleware para manejar errores
@@ -50,6 +51,7 @@ app.use("/api/auth", authRoutes); //Asigna el prefijo /api/auth a las rutas de a
 app.use("/api", reviewRoutes) //Asigna el prefijo /api a las rutas de reseñas
 app.use("/api", wishlistRoutes) //Asigna el prefijo /api a las rutas de la lista de deseos
 app.use("/api/cart", cartRoutes); //Asigna el prefijo /api/cart a las rutas del carrito
+app.use("/api/products", cloudinaryRoutes);
 
 app.use(notFound); //Maneja las rutas no encontradas
 app.use(errorHandler); //Maneja los errores de la aplicación

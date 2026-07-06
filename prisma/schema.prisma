@@ -13,6 +13,7 @@ model product {
   title String
   author String?
   price Float?
+  imageUrl String?
   stock Int?
   createAt DateTime @default(now()) @map("created_at")
 
